@@ -1,6 +1,5 @@
 import React from "react";
 
-// import Data from "../components/Data";
 import dataStore from "../stores/DataStore";
 
 export default class Datas extends React.Component {
@@ -11,25 +10,16 @@ export default class Datas extends React.Component {
       checked: false,
     };
 
-    this.id = 0;
-
     this.toggleCheck = this.toggleCheck.bind(this);
-  }
-
-  componentWillMount() {
-    // console.log(this.props.item);
   }
 
   componentWillReceiveProps(nextProps) {
     this.setState({
       data: nextProps.item,
     });
-    // console.log(nextProps.item);
   }
 
   toggleCheck(event) {
-
-    console.log(event.target.checked);
     this.setState({
       checked: !this.state.checked,
     });

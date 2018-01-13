@@ -13,7 +13,7 @@ class DataStore extends EventEmitter {
       if (a.name < b.name) {return -1;}
       if (a.name > b.name) {return 1;}
       return 0;
-    } );
+    });
 
     data.map((item) => {
       let name = item.name;
@@ -26,9 +26,6 @@ class DataStore extends EventEmitter {
         checked,
       });
     });
-
-    // console.log(this.data);
-
     this.emit("change");
   }
 
